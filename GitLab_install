@@ -1,0 +1,25 @@
+#!bt/bash
+
+# Update package lists
+sudo apt update
+
+# Install dependencies
+sudo apt install -y curl openssh-server ca-certificates
+
+# Add the GitLab package repository
+curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+
+# Install GitLab Community Edition
+sudo apt install -y gitlab-ce
+
+# Configure GitLab URL
+echo "external_url 'http://your-ec2-public-ip'" | sudo tee -a /etc/gitlab/gitlab.rb
+
+# Reconfigure and restart GitLab
+sudo gitlab-ctl reconfigure
+
+# Optional: If you're using a firewall like UFW, allow HTTP and SSH
+# sudo ufw allow OpenSSH
+# sudo ufw allow http
+# sudo ufw enable
+
