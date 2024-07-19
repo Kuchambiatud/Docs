@@ -46,7 +46,7 @@ You can follow same procedure in the official  AWS document [Getting started wit
    
    example:
    eksctl create cluster --name cloudfreak-cluster \
-      --region ap-us-east-1 \
+      --region us-east-1 \
    --node-type t2.medium \
     ```
 
