@@ -3,7 +3,7 @@
 ## Install Maven
 ```sh
 yum install wget
-wget https://dlcdn.apache.org/maven/maven-3/3.9.7/binaries/apache-maven-3.9.9-bin.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
 tar -xvzf apache-maven-3.9.9-bin.tar.gz
 export M2_HOME=/opt/apache-maven-3.9.9
 export M2=$M2_HOME/bin
