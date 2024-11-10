@@ -25,7 +25,7 @@ find / -name java-11* | head -n 4
 vi .bash_profile
 JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64
 export JAVA_HOME
-PATH=$PATH:$JAVA_HOME
+PATH=$PATH:$HOME/bin:$JAVA_HOME
 # To set it permanently update your .bash_profile
 source ~/.bash_profile
 ```
